@@ -4,6 +4,10 @@ var twitKeys = require("./keys.js");
 
 var twitter = require("twitter");
 
+var request = require("request");
+
+var spotify = require("spotify");
+
 var client = new twitter(twitKeys.twitterKeys);
 
 var params = {dg74155: 'nodejs'};
@@ -33,7 +37,6 @@ function tweetFun() {
 	  };
 	};
 })};
-var spotify = require("spotify");
 
 function noSong() {
     spotify.search({ type: 'track', query: "The Sign"}, function(err, data) {
@@ -100,7 +103,6 @@ function songFun() {
 	});
 };
 
-var request = require("request");
 
 var movieChoice = process.argv[3];
 
